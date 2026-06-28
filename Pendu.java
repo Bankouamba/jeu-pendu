@@ -2,14 +2,36 @@ import java.util.Scanner;
 
 public class Pendu {
 
+    static String[] pendu = {
+            
+                 "+---+\n      |\n       |\n
+        |\n         |\n     |\n========= ",
+             "  +---+\n  |   |\n     O       |\n            |\n========= ",
+        |\n         |\n     |\n========= ",
+             "  +---+\n  |   |\n     O       |\n            |\n========= ",
+        |\n         |\n      |\n========= ",
+             "  +---+\n  |   |\n     O       |\n   
+        |\n         |\n      |\n========= ",
+           "   +---+\n  |    |\n     O       |\n 
+        |\n      |\n         |\n========= ",
+             "  +---+\n  |   |\n     O   |\n
+        |\n           |\n     |\n========= ",
+            "  +---+\n  |     |\n      O    |\n      |\n========= "
+             };
+           //METHODES
+           static void afficherPendu(int erreurs) {
+           system.out.println(pendu[erreurs])
+           ;
+           }
     public static void main(String[] args) {
-
+    
         Scanner scanner = new Scanner(System.in);
 
         String motSecret = "JAVA";
         boolean trouve = false;
-
-        while (!trouve) {
+        int maxErreurs = pendu.length -1;
+    }
+        while (!trouve){ 
 
             System.out.print("Entrez une lettre : ");
             char lettre = scanner.next().toUpperCase().charAt(0);
@@ -18,12 +40,9 @@ public class Pendu {
                 System.out.println("Bonne lettre !");
                 trouve = true;
             } else {
-                System.out.println("Mauvaise lettre.");
+                System.out.println("Erreur !"+(maxErreurs - erreurs));
+                afficherPendu(erreurs);
             }
 
         }
-
-        System.out.println("Fin du jeu !");
-        scanner.close();
-    }
-}
+    
