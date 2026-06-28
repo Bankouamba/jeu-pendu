@@ -6,7 +6,8 @@ public class Pendu {
 
         Scanner scanner = new Scanner(System.in);
 
-        String motSecret = "JAVA";
+        BanqueMots banquemots= new BanqueMots();
+        String motSecret= banquemots.tirerMotAuHasard();
         boolean trouve = false;
 
         while (!trouve) {
